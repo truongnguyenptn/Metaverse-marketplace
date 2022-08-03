@@ -1,0 +1,20 @@
+.btn{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 120px;
+    padding: 12px 2px;
+    text-align: center;
+    display: block;
+    color: #fff;
+    border: 0px;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    background-image: -webkit-gradient(linear, right top, left top, from(#ff344d), to(#d2273c));
+    background-image: -webkit-linear-gradient(right, #ff344d, #d2273c);
+    background-image: -o-linear-gradient(right, #ff344d, #d2273c);
+    background-image: linear-gradient(to left, #ff344d, #d2273c);
+}

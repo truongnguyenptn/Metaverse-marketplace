@@ -1,0 +1,28 @@
+.row {
+    display: flex;
+    margin-right: 15px;
+    margin-left: 15px;
+    flex-wrap: wrap;
+}
+.content {
+    display: flex;
+    
+}
+.container {
+    padding-right: 15px;
+    padding-left: 45px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.col {
+    flex: 0 0 100%;
+}
+.dropdown:hover>.dropdown-menu{
+    display: block;
+}
+.dropdown-menu {
+ display: none;
+}
+.row, .container{
+    height: 100%;
+}

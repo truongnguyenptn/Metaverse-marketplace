@@ -1,0 +1,41 @@
+@import "./mixin";
+@import "./variable";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap");
+
+html {
+  font-family: "Open Sans", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  color: $second-color;
+  overflow-x: hidden;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+ul,
+li {
+  list-style: none;
+}
+select, i, button {
+    border: none;
+    color: none;
+    background: none;
+    color: $text-color;
+}
+a {
+  text-decoration: none;
+  font-size: 18px;
+}

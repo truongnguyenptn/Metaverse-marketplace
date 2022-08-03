@@ -1,0 +1,89 @@
+@import '../../styles/variable';
+.modal{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    z-index: 999999;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color: $bg-opaque;
+    
+    
+    overflow: hidden;
+    .modal__dialog{
+        width: auto;
+        background-color: $second-color;
+        min-height: calc(100% - 3.5rem);
+        max-height: 100%;
+        max-width: 600px;
+        margin: 1.75rem auto;
+        padding-bottom: 8%;
+        position: relative;
+    }
+    .modal__logo{
+        color: $text-white;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 30px;
+        h1{
+            font-size: 40px;
+        }
+    }
+    .modal__body{
+        padding: 40px 28px;
+    }
+    .close {
+        color: $text-white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        position: absolute;
+        margin-right: 8px;
+        margin-left: auto;
+        .close-icon{
+            font-size: 28px;
+            font-weight: 600;
+
+        }
+    }
+    .form-group{
+        margin-bottom: 10px;
+    }
+    label{
+        color: $text-white;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+    input{
+        background: none;
+        border: none;
+        width: 100%;
+        border: 0px;
+        height: 50px;
+        font-size: 14px;
+        color: $text-color;
+        background: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 12px;
+
+    }
+    .btn, select{
+        width: 100%;
+    }
+    .btn{
+        margin-top: 38px;
+    }
+    select{
+        height: 50px;
+        border-radius: 30px;
+        border: 1px solid $text-color-opaque;
+        margin-top: 8px;
+    }
+    option{
+        background-color: $bg-color;
+    }
+}

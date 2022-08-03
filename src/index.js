@@ -1,13 +1,19 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
+
+import { I18nextProvider } from 'react-i18next';
+import i18n from './multiLang/i18n';
+import './styles/index.scss';
+import Layout from './layout/Layout';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Suspense>
+      <Layout />
+    </Suspense>
   </React.StrictMode>
 );
 
