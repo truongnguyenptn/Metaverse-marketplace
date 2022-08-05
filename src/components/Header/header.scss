@@ -109,9 +109,6 @@ header {
   .nav__item {
     padding: 0px 28px;
   }
-  button {
-    color: $bg-color;
-  }
   .navbar__toggle {
     display: none;
   }
@@ -128,7 +125,7 @@ header {
     border-bottom: 0;
     border-left: 0.3em solid transparent;
   }
-  .nav__item:not(:nth-last-child(1)):hover {
+  .nav__item:not(:nth-last-child(1)):hover, .active {
     border-top: 4px solid $effect-base;
     border-bottom: 4px solid $effect-base;
     opacity: 1;

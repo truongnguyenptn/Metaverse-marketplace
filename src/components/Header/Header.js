@@ -7,18 +7,17 @@ import LeftContent from './LeftContent';
 import {Link} from 'react-router-dom';
 import { useRef } from 'react';
 import Button from '../Button/Button';
-function Header() {
+function Header({toggleModal,active}) {
     const { t, i18n } = useTranslation();
-
+    console.log(toggleModal)
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
     };
     const HEADER_TOP = useRef(null);
     const NAV_MENU = useRef(null);
     const HEADER = useRef(null);
-    const LOGIN_MODAL = useRef(null);
     let sticky = HEADER;
-    console.log(sticky)
+    // console.log(sticky)
 
     function headerFixed() {
         if(window.scrollY> sticky){
@@ -49,7 +48,7 @@ function Header() {
         },
         {
             "NAME": " PAGES",
-            "Z": "HOME",
+            "PAGES_": "HOME",
         },
         {
             "NAME": " CONTACT",
@@ -119,16 +118,19 @@ function Header() {
                                     <div className='navbar-collapse'>
                                         <ul className='navbar__nav'>
                                             {NAV.map((item,index)=>{
-                                                let CLASSNAME = 'nav__link';
-                                                if(item.NAME===" HOME" || item.NAME===" PAGES") CLASSNAME+=" dropdown-toggle";
-                                                return(<li key={index} className='nav__item'>
-                                                <Link to="/" className={CLASSNAME}>
+
+                                                let LINKCLASSNAME = 'nav__link';
+                                                let ITEMCLASSNAME = 'nav__item';
+                                                if(index==active) ITEMCLASSNAME+=' active';
+                                                if(item.NAME===" HOME" || item.NAME===" PAGES") LINKCLASSNAME+=" dropdown-toggle";
+                                                return(<li key={index} className={ITEMCLASSNAME}>
+                                                <Link to="/" className={LINKCLASSNAME}>
                                                     {item.NAME}
                                                 </Link>
                                             </li>)
                                             })}
                                             <li className='nav__item'>
-                                            <Button className='btn'>Join us</Button>
+                                            <Button onClickFunc={toggleModal} btnClassName='btn-active'>Join us</Button>
                                             </li>
                                             
                                         </ul>

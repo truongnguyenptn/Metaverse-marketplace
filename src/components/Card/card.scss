@@ -1,0 +1,32 @@
+@import "../../styles/variable";
+.card {
+  border-radius: 10px;
+  text-align: center;
+  color: $text-white;
+  background-color: $second-color;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px 40px 20px;
+  width: 340px;
+  .icon {
+    padding: 32px 8px;
+  }
+  .title {
+    margin-top: 38px;
+    margin-bottom: 14px;
+    font-weight: 600;
+    font-size: 38px;
+  }
+  .readmore {
+    margin-top: 24px;
+    position: relative;
+    font-weight: 300;
+  }
+  .readmore:after {
+    position: absolute;
+    content: ">>";
+    top: 0px;
+    color: $text-white;
+    right: 39px;
+  }
+}

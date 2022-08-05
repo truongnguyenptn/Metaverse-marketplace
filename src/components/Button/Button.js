@@ -1,8 +1,8 @@
 import './Button.scss'
-function Button({props,children}) {
-    return (<a href="#" className='btn'>
+function Button({onClickFunc,btnClassName,children}) {
+    return (<button onClick={()=>onClickFunc()} className={`btn `+btnClassName}>
         <p>{children}</p>
-    </a> );
+    </button> );
 }
 
 export default Button;

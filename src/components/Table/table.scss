@@ -1,0 +1,37 @@
+@import '../../styles/variable';
+.table{
+    width: 100%;
+    margin-bottom: 1rem;
+    color: $text-white;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    text-indent: initial;
+    border: none !important;
+    thead{
+        background-color: $bg-color;
+        padding: 20px 15px;
+
+    }
+    thead th {
+        padding: 20px 15px;
+
+    }
+    thead, tbody{
+        border: none;
+        border-collapse: collapse;
+        border-spacing: 0 !important;
+    }
+    tbody{
+        background-color: $element-bg-color;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    td {
+        font-size: 18px;
+        font-weight: 600;
+        padding: 28px 15px;
+    }
+   
+}

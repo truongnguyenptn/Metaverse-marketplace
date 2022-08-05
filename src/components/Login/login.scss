@@ -4,11 +4,12 @@
     left: 0;
     right: 0;
     bottom: 0;
+    position: fixed;
+    height: 100%;
     display: none;
-    z-index: 999999;
-    height: 100vh;
+    z-index: 99999999999999999999999;
+    height: 100%;
     width: 100%;
-    position: absolute;
     background-color: $bg-opaque;
     
     
@@ -50,7 +51,12 @@
 
         }
     }
+    .modal__sub-title{
+        color: $text-color-opaque;
+        text-align: center;
+    }
     .form-group{
+        margin-top: 40px;
         margin-bottom: 10px;
     }
     label{
@@ -86,4 +92,7 @@
     option{
         background-color: $bg-color;
     }
+}
+.show{
+    display: block;
 }
