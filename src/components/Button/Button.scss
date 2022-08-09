@@ -1,0 +1,22 @@
+@import '../../styles/variable';
+.btn{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0 auto;
+    width: 120px;
+    padding: 12px 2px;
+    text-align: center;
+    display: block;
+    color: #fff;
+    border: 0px;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    background-color: $bg-color;
+}
+.btn-active{
+    background-image: linear-gradient(to left, $effect-base, $effect-threshold) !important;
+}

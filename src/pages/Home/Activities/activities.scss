@@ -1,0 +1,23 @@
+@import '../../../styles/variable';
+.activities{
+    padding: 110px 0px 113px;
+    position: relative;
+    background-color: $bg-color;
+    .responsive-table{
+        padding-top: 40px;
+    }
+    .btn{
+        background: $bg-color;
+    }
+    .btn-nav{
+        background-color: #333;
+    }
+}
+.tab__menu{
+    margin-top: 80px;
+}
+.menu-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,15 @@
+@import '../../../styles/variable';
+.recent-winners{
+    background-color: $bg-color;
+    padding: 112px;
+    .winners{
+        margin-top: 48px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .col-3{
+        width: calc(100%/3);
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}

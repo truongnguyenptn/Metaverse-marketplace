@@ -1,0 +1,32 @@
+@import '../../../styles/variable';
+.hero {
+    background-color: $bg-color;
+    display: flex;
+   
+    .col-5{
+        min-width: calc((100/12)*5%);
+    }
+    .row{
+        justify-content: space-between;
+    }
+    .content {
+        display: block;
+        justify-content: center;
+        
+    }
+    .col-7{
+        min-width: calc((100/12)*7%);
+        img{
+            width: 100%;
+        }
+    }
+    .btn{
+        width: 220px;
+        margin-top: 42px;
+        margin-left: 0;
+        p{
+        color: $text-white !important;
+            text-transform: uppercase;
+        }
+    }
+}

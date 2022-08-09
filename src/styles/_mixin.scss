@@ -1,0 +1,63 @@
+@import './_variable.scss';
+.row {
+    display: flex;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    
+}
+.container {
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+.container-content{
+    padding: 300px 120px;
+}
+.col {
+    flex: 0 0 100%;
+}
+.col-12-align{
+    display: flex;
+    justify-content: space-between;
+  }
+.dropdown:hover>.dropdown-menu{
+    display: block;
+}
+.dropdown-menu {
+ display: none;
+}
+.row, .container, .col-12-align{
+    width: 100%;
+    height: 100%;
+}
+.subtitle{
+    color: $effect-base;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+.title{
+    color: $text-white;
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.text{
+    color: $text-color-opaque;
+    font-size: 28px;
+    font-weight: 300;
+}
+.center{
+    margin-right: 0 auto;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}

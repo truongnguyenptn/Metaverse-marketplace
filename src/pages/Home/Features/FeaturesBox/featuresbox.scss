@@ -1,0 +1,16 @@
+.features-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transform: translateY(-50%);
+    width: 100%;
+    
+}
+.owl-stage {
+    transform: translate3d(-1110px, 0px, 0px);
+    transition: all 0s ease 0s;
+    width: 3700px;
+  }
+  .cloned{
+      width: 370px; margin-right: 0px;
+  }
