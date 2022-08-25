@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-function RightContent() {
+function RightContent({content}) {
     return (<div className="right-content">
         <ul className="right-list">
             <li>
@@ -68,7 +68,7 @@ function RightContent() {
             </li>
             <li>
                 <a href="#" className="sign-in" data-toggle="modal" data-target="#login">
-                    <FontAwesomeIcon icon="fas fa-user" /> Sign In
+                    <FontAwesomeIcon icon="fas fa-user" /> {content}
 
                 </a>
             </li>

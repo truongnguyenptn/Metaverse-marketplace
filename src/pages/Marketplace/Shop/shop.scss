@@ -1,0 +1,40 @@
+@import '../../../styles/variable';
+.shop{
+    background-color: $bg-color;
+}
+.shop__container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    label,h5{
+        color: $text-white;
+    }
+    .filter__panel{
+        border: none;
+        border-top: 1px solid $text-color;
+        border-bottom: 1px solid $text-color;
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        justify-content: space-between;
+        padding: 16px 13px 16px 20px;
+    }
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    
+    }
+    .CollapseTrigger__container{
+        display: flex;
+    }
+    .filter__icon{
+        svg{
+            color: $text-white !important;
+
+        }
+    }
+    .filter__icon{
+        display: none;
+    }
+}
+

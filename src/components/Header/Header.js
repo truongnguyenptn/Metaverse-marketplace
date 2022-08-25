@@ -1,6 +1,4 @@
-import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
-import ReactDOM from 'react-dom'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './header.scss'
 import RightContent from './RightContent';
@@ -8,11 +6,13 @@ import LeftContent from './LeftContent';
 import {Link} from 'react-router-dom';
 import { useRef } from 'react';
 import Button from '../Button/Button';
-import { type } from '@testing-library/user-event/dist/type';
+import { useTranslation } from 'react-i18next'
+import i18next from 'i18next'
+import cookies from 'js-cookie'
+
 function Header({toggleModal,active}) {
     const {t} = useTranslation();
     const changeLanguage = (lng) => {
-        console.log(lng)
         i18next.changeLanguage(lng);
     };
     const HEADER_TOP = useRef(null);
@@ -27,9 +27,6 @@ function Header({toggleModal,active}) {
         } else {
             HEADER_TOP.current.className.remove('hide');
         }
-    }
-    function showModal(){
-
     }
     const NAV = [
         {
@@ -46,7 +43,7 @@ function Header({toggleModal,active}) {
         },
         {
             "NAME": " MARKETPLACE",
-            "ROUTE": "/",
+            "ROUTE": "/marketplace",
         },
         {
             "NAME": " PAGES",
@@ -114,8 +111,8 @@ function Header({toggleModal,active}) {
           country_code: 'sa',
         },
       ]
-      const HEADER_TRANS = t('header_pages', { returnObjects: true });
-      console.log(HEADER_TRANS)
+      let HEADER_TRANS = i18next.t(`header_pages`, { returnObjects: true });
+      let TOP_HEADER = t('top_header', { returnObjects: true });
     return (
         <header ref={HEADER}>
             <div ref={HEADER_TOP} className='header__top'>
@@ -123,8 +120,8 @@ function Header({toggleModal,active}) {
                     <div className='row'>
                         <div className='col'>
                             <div className='content'>
-                                <LeftContent languages={languages} changeLanguage={changeLanguage}/>
-                                <RightContent />
+                                <LeftContent content={TOP_HEADER.left} languages={languages} changeLanguage={changeLanguage}/>
+                                <RightContent content={TOP_HEADER.right}/>
                             </div>
                         </div>
                     </div>
@@ -153,7 +150,7 @@ function Header({toggleModal,active}) {
                                             </li>)
                                             })}
                                             <li className='nav__item'>
-                                            <Button onClickFunc={toggleModal} btnClassName='btn-active'>Join us</Button>
+                                            <Button onClickFunc={toggleModal} btnClassName='btn-active'>{HEADER_TRANS[HEADER_TRANS.length-1]}</Button>
                                             </li>
                                             
                                         </ul>

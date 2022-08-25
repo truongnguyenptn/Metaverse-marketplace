@@ -4,7 +4,7 @@ import heroarea from '../../../assets/heroarea.png';
 function Hero() {
     
     return (<section className="hero">
-        <div className="container container-content">
+        <div className="container container-breadcrumb">
             <div className="row">
                 <div className="col-5">
                     <div className="content">

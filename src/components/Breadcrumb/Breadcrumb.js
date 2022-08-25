@@ -1,7 +1,7 @@
 import './breadcrumb.scss';
 function Breadcrumb({bcImg,bcTitle}) {
     return (<section className="breadcrumb">
-        <div className="container container-content">
+        <div className="container container-breadcrumb">
             <div className="row">
                 <div className="col">
                     <div className="title">
