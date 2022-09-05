@@ -31,7 +31,7 @@ const props = {
                     "placeholder": "Enter your Confirm Password"
                 },
             ],
-            "action": "Register"
+            "action": "Login"
         }
 function closeModal(modal){
     if(modal) {
@@ -39,52 +39,46 @@ function closeModal(modal){
         target.classList.remove("show");
     }
 }
-const ModalLogin = React.forwardRef((p, modal) => (
-
-    <div ref={modal} className="modal">
-        <div className="modal__dialog">
-            <div className="modal__content">
-                <div onClick={()=>closeModal(modal)} className="close">
-                    <FontAwesomeIcon className='close-icon' icon="fa-solid fa-xmark" />
+const ModalLogin = React.forwardRef((p, modal) => 
+    (<div ref={modal} className="modal modal-login">
+    <div className="modal__dialog">
+        <div className="modal__content">
+            <div onClick={()=>closeModal(modal)} className="close">
+                <FontAwesomeIcon className='close-icon' icon="fa-solid fa-xmark" />
+            </div>
+            <div className="modal__body">
+                <div className="modal__logo">
+                    <h1 className='modal__logo'>ACHERTYPE</h1>
                 </div>
-                <div className="modal__body">
-                    <div className="modal__logo">
-                        <h1 className='modal__logo'>ACHERTYPE</h1>
-                    </div>
-                    <div className="modal__header">
-                        <h4 className='modal__title'>
-                            {props.title}
-                        </h4>
-                        <p className='modal__sub-title'>
-                            {props['sub-title']}
-                        </p>
-                    </div>
-                    <div className="modal__form">
-                        <form>
-                            {props.field.map((item) => {
-                                return (
-                                    <div className="form-group">
-                                        <label htmlFor={item.id}>{item.label}</label>
-                                        <input type={item.type} className="input-field" id={item.id} placeholder={item.placeholder} />
-                                    </div>
-                                )
-                            })}
-                            <div className="form-group">
-                                <select>
-                                    <option value="0">BTC</option>
-                                    <option value="1">USD</option>
-                                    <option value="2">EUR</option>
-                                </select>
-                            </div>
-                        </form>
-                    </div>
-                    <Button btnClassName='btn-active'>
-                        {props.action}
-                    </Button>
+                <div className="modal__header">
+                    <h4 className='modal__title'>
+                        {props.title}
+                    </h4>
+                    <p className='modal__sub-title'>
+                        {props['sub-title']}
+                    </p>
                 </div>
+                <div className="modal__form">
+                    <form>
+                        {props.field.map((item) => {
+                            return (
+                                <div className="form-group">
+                                    <label htmlFor={item.id}>{item.label}</label>
+                                    <input type={item.type} className="input-field" id={item.id} placeholder={item.placeholder} />
+                                </div>
+                            )
+                        })}
+                    </form>
+                </div>
+                <Button btnClassName='btn-active'>
+                    {props.action}
+                </Button>
             </div>
         </div>
-    </div>)
+    </div>
+</div>)
+
+    
 );
 // function ModalLogin() {
 //     const props = {

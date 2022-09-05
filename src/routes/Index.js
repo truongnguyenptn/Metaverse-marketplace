@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from '../pages/Home/Home';
 import Marketplace from '../pages/Marketplace/Marketplace';
 import Play from '../pages/Play/Play';
-function Router() {
+function AppRoutes() {
     return (<Routes>
         <Route path='/'>
             <Route index element={<Home />}/>
@@ -12,4 +12,4 @@ function Router() {
     </Routes>);
 }
 
-export default Router;
+export default AppRoutes;

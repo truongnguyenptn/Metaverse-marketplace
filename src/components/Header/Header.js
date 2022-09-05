@@ -9,8 +9,8 @@ import Button from '../Button/Button';
 import { useTranslation } from 'react-i18next'
 import i18next from 'i18next'
 import cookies from 'js-cookie'
-
-function Header({toggleModal,active}) {
+import toggleModal from '../../utils/Modal/toggleModal';
+function Header({modal,active}) {
     const {t} = useTranslation();
     const changeLanguage = (lng) => {
         i18next.changeLanguage(lng);
@@ -121,7 +121,7 @@ function Header({toggleModal,active}) {
                         <div className='col'>
                             <div className='content'>
                                 <LeftContent content={TOP_HEADER.left} languages={languages} changeLanguage={changeLanguage}/>
-                                <RightContent content={TOP_HEADER.right}/>
+                                <RightContent content={TOP_HEADER.right} onClickFunc={()=>toggleModal(modal.ModalLoginRef)}/>
                             </div>
                         </div>
                     </div>
@@ -141,7 +141,7 @@ function Header({toggleModal,active}) {
                                             {NAV.map((item,index)=>{
                                                 let LINKCLASSNAME = 'nav__link';
                                                 let ITEMCLASSNAME = 'nav__item';
-                                                if(index==active) ITEMCLASSNAME+=' active';
+                                                if(index===active) ITEMCLASSNAME+=' active';
                                                 if(item.NAME===" HOME" || item.NAME===" PAGES") LINKCLASSNAME+=" dropdown-toggle";
                                                 return(<li key={index} className={ITEMCLASSNAME}>
                                                 <Link to={item.ROUTE} className={LINKCLASSNAME}>
@@ -150,7 +150,7 @@ function Header({toggleModal,active}) {
                                             </li>)
                                             })}
                                             <li className='nav__item'>
-                                            <Button onClickFunc={toggleModal} btnClassName='btn-active'>{HEADER_TRANS[HEADER_TRANS.length-1]}</Button>
+                                            <Button onClickFunc={()=>toggleModal(modal.ModalRegisterRef)} btnClassName='btn-active'>{HEADER_TRANS[HEADER_TRANS.length-1]}</Button>
                                             </li>
                                             
                                         </ul>

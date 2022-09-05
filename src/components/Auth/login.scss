@@ -7,25 +7,23 @@
     position: fixed;
     height: 100%;
     display: none;
+    overflow: auto;
     z-index: 99999999999999999999999;
-    height: 100%;
     width: 100%;
     background-color: $bg-opaque;
-    
-    
-    overflow: hidden;
+    .modal__content{
+        background-color: $second-color;
+    }
     .modal__dialog{
         width: auto;
         background-color: $second-color;
-        min-height: calc(100% - 3.5rem);
+        padding-bottom: 40px;
         max-height: 100%;
         max-width: 600px;
         margin: 1.75rem auto;
-        padding-bottom: 8%;
         position: relative;
     }
     .modal__logo{
-        color: $text-white;
         align-items: center;
         justify-content: center;
         text-align: center;
@@ -37,8 +35,12 @@
     .modal__body{
         padding: 40px 28px;
     }
-    .close {
+    .modal__title,.close, .modal__logo{
         color: $text-white;
+        text-align: center;
+
+    }
+    .close {
         position: absolute;
         top: 0;
         right: 0;
@@ -51,7 +53,8 @@
 
         }
     }
-    .modal__sub-title{
+    .modal__sub-title {
+        padding-top: 12px;
         color: $text-color-opaque;
         text-align: center;
     }
