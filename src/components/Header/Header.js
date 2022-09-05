@@ -95,20 +95,9 @@ function Header({modal,active}) {
             country_code: 'gb',
           },
         {
-          code: 'fr',
-          name: 'Français',
-          country_code: 'fr',
-        },
-        {
             code: 'vn',
             name: 'Vietnamese',
             country_code: 'vn',
-        },
-        {
-          code: 'ar',
-          name: 'العربية',
-          dir: 'rtl',
-          country_code: 'sa',
         },
       ]
       let HEADER_TRANS = i18next.t(`header_pages`, { returnObjects: true });
@@ -133,7 +122,7 @@ function Header({modal,active}) {
                         <div className='col'>
                             <nav className='navbar'>
                                 <a className ='nav__brand'>
-                                    <h1>ACHERTYPE</h1>
+                                    <h1>METAVERSE</h1>
                                     </a>
                                     <div className='navbar-collapse'>
                                         <ul className='navbar__nav'>
@@ -141,7 +130,7 @@ function Header({modal,active}) {
                                             {NAV.map((item,index)=>{
                                                 let LINKCLASSNAME = 'nav__link';
                                                 let ITEMCLASSNAME = 'nav__item';
-                                                if(index===active) ITEMCLASSNAME+=' active';
+                                                if(index==active) ITEMCLASSNAME+=' active';
                                                 if(item.NAME===" HOME" || item.NAME===" PAGES") LINKCLASSNAME+=" dropdown-toggle";
                                                 return(<li key={index} className={ITEMCLASSNAME}>
                                                 <Link to={item.ROUTE} className={LINKCLASSNAME}>

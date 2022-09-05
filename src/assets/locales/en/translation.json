@@ -1,6 +1,6 @@
 {
     "top_header": {
-        "left":["Support"],
+        "left":[" Support"],
         "right": ["Sign in"]
     },
     "header_pages": 
@@ -10,6 +10,6 @@
             ,"PLAY","ROADMAP","MARKETPLACE","PAGES","Join us"
     ],
     "home_hero": [
-        "WELCOME TO OUR METAVERSE","NEW LIFE Z","Let's working, play to earn NLZ coin!","Play now"
+        "WELCOME TO OUR METAVERSE","METAVERSE BY META","Let's working, play to earn NLZ coin!","Play now"
     ]
   }

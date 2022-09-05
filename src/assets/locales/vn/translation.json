@@ -1,6 +1,6 @@
 {
     "top_header": {
-        "left":["Hỗ trợ"],
+        "left":[" Hỗ trợ"],
         "right": ["Đăng nhập"]
     },
     "header_pages": [
@@ -8,6 +8,6 @@
             "TRANG CHỦ","CHƠI","HƯỚNG PHÁT TRIỂN","CHỢ","CÁC TRANG KHÁC","Tham gia"
     ],
     "home_hero": [
-        "WELCOME TO OUR METAVERSE","NEW LIFE Z","Let's working, play to earn NLZ coin!","Play now"
+        "WELCOME TO OUR METAVERSE","METAVERSE CỦA META","Let's working, play to earn NLZ coin!","Play now"
     ]
   }

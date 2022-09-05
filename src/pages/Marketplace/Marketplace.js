@@ -9,19 +9,13 @@ import ModalLogin from "../../components/Auth/Login";
 import ModalRegister from "../../components/Auth/Login";
 import toggleModal from "../../utils/Modal/toggleModal";
 function Marketplace() {
-    const ModalRegister = createRef(null);
-    const ModalLogin = createRef(null);
-    function toggleLogin(){
-        toggleModal(ModalLogin)
-    }
-    function toggleRegister(){
-        toggleModal(ModalRegister)
-    }
-    const toggleModalFunc = {toggleLogin,toggleRegister};
+    const ModalRegisterRef = createRef(null);
+    const ModalLoginRef = createRef(null);
+    const Modal = {ModalLoginRef,ModalRegisterRef};
     return (<div className="marketplace">
-        <ModalRegister ref={ModalRegister}></ModalRegister>
-        <ModalLogin ref={ModalLogin}></ModalLogin>
-        <Header active='3' toggleModal={()=>toggleModalFunc()}/>
+        <ModalLogin ref={ModalLoginRef}/>
+        <ModalRegister ref={ModalRegisterRef}/>
+        <Header modal={Modal} active='3' />
         <Breadcrumb bcImg={bcImg} bcTitle="Marketplace"  />
         <Shop/>
     </div>);

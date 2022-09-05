@@ -12,7 +12,7 @@ function Hero() {
                             Welcome to our Metaverse
                         </h5>
                         <h1 className="title">
-                            NEW LIFE Z
+                            METAVERSE - META
                         </h1>
                         <p className="text">
                             Let's working, play to earn NLZ coin!
